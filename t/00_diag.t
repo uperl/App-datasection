@@ -10,6 +10,8 @@ my %modules;
 my $post_diag;
 
 $modules{$_} = $_ for qw(
+  App::Cmd::Setup
+  Data::Section::Pluggable
   ExtUtils::MakeMaker
   Test2::V0
   stable
