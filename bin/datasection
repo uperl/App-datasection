@@ -1,0 +1,11 @@
+#!/usr/bin/env perl
+
+use 5.020;
+use warnings;
+use lib::findbin '../lib'; # dev-only
+use App::datasection;
+
+# PODNAME: datasection
+# ABSTRACT: ABSTRACT: Work with __DATA__ section files from the command line
+
+return App::datasection->main(@ARGV);
