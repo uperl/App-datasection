@@ -6,7 +6,7 @@ use true;
 
 package App::datasection::Command::extract {
 
-    # ABSTRACT: ...
+    # ABSTRACT: Extract files from Perl source __DATA__ section
     # VERSION
 
     use App::datasection -command;
@@ -39,15 +39,27 @@ package App::datasection::Command::extract {
 
 }
 
+=head1 SYNOPSIS
+
+ datasection extract [ -d DIRECTORY ] SOURCE [ SOURCE ... ]
+
 =head1 DESCRIPTION
 
-...
+This subcommand extracts the files located in the Perl source file
+or files into the filesystem.  By default it uses a separate
+directory for each source file (named as the source filename with
+C<.data> appended to it).  You can alternatively specify your
+own directory with the C<-d> option.
 
 =head1 SEE ALSO
 
-=over
+=over 4
 
-=item L<App::datasection>
+=item L<App::datasection::Command::extract>
+
+=item L<App::datasection::Command::diff>
+
+=item L<App::datasection::Command::insert>
 
 =back
 

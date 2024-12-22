@@ -39,7 +39,7 @@ source files.  This tool provides these subcommands:
     datasection insert [ -d DIRECTORY ] SOURCE [ SOURCE ... ]
     ```
 
-    Inser the files from the filesystem into Perl source `__DATA__`
+    Insert the files from the filesystem into Perl source `__DATA__`
     section.
 
 # SEE ALSO

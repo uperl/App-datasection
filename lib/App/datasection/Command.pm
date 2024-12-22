@@ -9,6 +9,16 @@ package App::datasection::Command {
     # ABSTRACT: Base class for datasection subcommands
     # VERSION
 
+=head1 SYNOPSIS
+
+ perldoc datasection
+
+=head1 DESCRIPTION
+
+This is an internal class for L<datasection>.
+
+=cut
+
     use App::Cmd::Setup -command;
 
     sub opt_spec {

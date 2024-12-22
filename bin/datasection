@@ -41,7 +41,7 @@ section in the Perl source file.
 
  datasection insert [ -d DIRECTORY ] SOURCE [ SOURCE ... ]
 
-Inser the files from the filesystem into Perl source C<__DATA__>
+Insert the files from the filesystem into Perl source C<__DATA__>
 section.
 
 =back
