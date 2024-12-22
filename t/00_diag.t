@@ -11,6 +11,7 @@ my $post_diag;
 
 $modules{$_} = $_ for qw(
   App::Cmd::Setup
+  App::Cmd::Tester
   Data::Section::Pluggable
   Data::Section::Writer
   ExtUtils::MakeMaker
