@@ -31,6 +31,7 @@ package App::datasection::Command::extract {
             if($dsp->get_data_section->%*) {
                 $dir->mkdir;
                 $dsp->extract($dir);
+                say $file;
             }
         }
 

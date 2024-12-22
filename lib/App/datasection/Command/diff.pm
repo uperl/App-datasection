@@ -46,8 +46,10 @@ package App::datasection::Command::diff {
                 unless($dsw->unchanged) {
                     my $diff = diff \$file->slurp_utf8, \$tmp->slurp_utf8;
                     chomp $diff;
-                    say "--- a/$file";
-                    say "+++ b/$file";
+                    my $from = path('a')->child($file);
+                    my $to = path('b')->child($file);
+                    say "--- $from";
+                    say "+++ $to";
                     say $diff;
                 }
             }
