@@ -5,7 +5,44 @@ use warnings;
 use lib::findbin '../lib'; # dev-only
 use App::datasection;
 
+App::datasection->run;
+
 # PODNAME: datasection
 # ABSTRACT: Work with __DATA__ section files from the command line
 
-App::datasection->run;
+=head1 SYNOPSIS
+
+ datasection extract t/foo.t
+ datasection diff t/foo.t
+ datasection insert t/foo.t
+
+=head1 DESCRIPTION
+
+This tool is for working with C<__DATA__> section files, and lets you
+extract, manipulate and re-insert into the C<__DATA__> section of Perl
+source files.  This tool provides these subcommands:
+
+=over 4
+
+=item L<extract|App::datasection::Command::extract>
+
+Extract files from a C<__DATA__> section into the filesystem.
+
+=item L<diff|App::datasection::Command::diff>
+
+See the differences between the filesystem and the C<__DATA__>
+section in the Perl source file.
+
+=back
+
+=head1 SEE ALSO
+
+=over 4
+
+=item L<Data::Section::Writer>
+
+=item L<Data::Section::Pluggable>
+
+=back
+
+=cut
