@@ -10,22 +10,8 @@ package App::datasection::Command::extract {
     # VERSION
 
     use App::datasection -command;
-    use Data::Section::Pluggable;
-
-    sub opt_spec {
-        return (
-            [ "dir|d=s" => "Directory to extract to" ],
-        );
-    }
-
-    sub validate_args ($self, $opt, $args) {
-        my(@files) = @$args;
-        $self->SUPER::validate_args($opt, $args);
-        $self->usage_error("Perl source files are required") unless @files;
-        foreach my $file (@files) {
-            $self->usage_error("No such file $file") unless -f $file;
-        }
-    }
+    use Data::Section::Pluggable 0.08;
+    use Path::Tiny qw( path );
 
     sub execute ($self, $opt, $args) {
 
@@ -40,7 +26,7 @@ package App::datasection::Command::extract {
             my $dir = $dir ? $dir : $file->sibling($file->basename . '.data');
 
             my $dsp = Data::Section::Pluggable
-                ->new( file => $file );
+                ->new( filename => $file );
 
             if($dsp->get_data_section->%*) {
                 $dir->mkdir;
