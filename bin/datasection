@@ -26,12 +26,23 @@ source files.  This tool provides these subcommands:
 
 =item L<extract|App::datasection::Command::extract>
 
+ datasection extract [ -d DIRECTORY ] SOURCE [ SOURCE ... ]
+
 Extract files from a C<__DATA__> section into the filesystem.
 
 =item L<diff|App::datasection::Command::diff>
 
+ datasection diff [ -d DIRECTORY ] SOURCE [ SOURCE ... ]
+
 See the differences between the filesystem and the C<__DATA__>
 section in the Perl source file.
+
+=item L<insert|App::datasection::Command::insert>
+
+ datasection insert [ -d DIRECTORY ] SOURCE [ SOURCE ... ]
+
+Inser the files from the filesystem into Perl source C<__DATA__>
+section.
 
 =back
 

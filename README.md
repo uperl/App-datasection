@@ -18,12 +18,29 @@ source files.  This tool provides these subcommands:
 
 - [extract](https://metacpan.org/pod/App::datasection::Command::extract)
 
+    ```
+    datasection extract [ -d DIRECTORY ] SOURCE [ SOURCE ... ]
+    ```
+
     Extract files from a `__DATA__` section into the filesystem.
 
 - [diff](https://metacpan.org/pod/App::datasection::Command::diff)
 
+    ```
+    datasection diff [ -d DIRECTORY ] SOURCE [ SOURCE ... ]
+    ```
+
     See the differences between the filesystem and the `__DATA__`
     section in the Perl source file.
+
+- [insert](https://metacpan.org/pod/App::datasection::Command::insert)
+
+    ```
+    datasection insert [ -d DIRECTORY ] SOURCE [ SOURCE ... ]
+    ```
+
+    Inser the files from the filesystem into Perl source `__DATA__`
+    section.
 
 # SEE ALSO
 
