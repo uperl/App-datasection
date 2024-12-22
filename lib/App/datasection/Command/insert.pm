@@ -6,7 +6,7 @@ use true;
 
 package App::datasection::Command::insert {
 
-    # ABSTRACT: ...
+    # ABSTRACT: Insert files from the file system into Perl source __DATA__ section
     # VERSION
 
     use App::datasection -command;
@@ -48,15 +48,27 @@ package App::datasection::Command::insert {
 
 }
 
+=head1 SYNOPSIS
+
+ datasection insert [ -d DIRECTORY ] SOURCE [ SOURCE ... ]
+
 =head1 DESCRIPTION
 
-...
+This subcommand inserts the files located on the filesystem
+into the Perl source file or files.  By default it uses a
+separate directory for each source file (named as the source
+filename with C<.data> appended to it).  You can alternatively
+specify your own directory with the C<-d> option.
 
 =head1 SEE ALSO
 
-=over
+=over 4
 
-=item L<App::datasection>
+=item L<App::datasection::Command::extract>
+
+=item L<App::datasection::Command::diff>
+
+=item L<App::datasection::Command::insert>
 
 =back
 

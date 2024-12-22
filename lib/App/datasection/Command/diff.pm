@@ -6,7 +6,7 @@ use true;
 
 package App::datasection::Command::diff {
 
-    # ABSTRACT: ...
+    # ABSTRACT: Show the differences between the filesystem and Perl source __DATA__ section files
     # VERSION
 
     use App::datasection -command;
@@ -58,15 +58,30 @@ package App::datasection::Command::diff {
 
 }
 
+=head1 SYNOPSIS
+
+ datasection insert [ -d DIRECTORY ] SOURCE [ SOURCE ... ]
+
 =head1 DESCRIPTION
 
-...
+This subcommand shows the difference between the files located
+on the filesystem into the Perl source file or files.  By
+default it uses a separate directory for each source file
+(named as the source filename with C<.data> appended to it).
+You can alternatively specify your own directory with the
+C<-d> option.
+
+B<NOTE>: the format of the diff subject to change.
 
 =head1 SEE ALSO
 
-=over
+=over 4
 
-=item L<App::datasection>
+=item L<App::datasection::Command::extract>
+
+=item L<App::datasection::Command::diff>
+
+=item L<App::datasection::Command::insert>
 
 =back
 
