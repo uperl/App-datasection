@@ -1,6 +1,6 @@
 # datasection ![static](https://github.com/uperl/App-datasection/workflows/static/badge.svg) ![linux](https://github.com/uperl/App-datasection/workflows/linux/badge.svg)
 
-ABSTRACT: Work with \_\_DATA\_\_ section files from the command line
+Work with \_\_DATA\_\_ section files from the command line
 
 # AUTHOR
 
