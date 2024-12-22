@@ -12,8 +12,11 @@ my $post_diag;
 $modules{$_} = $_ for qw(
   App::Cmd::Setup
   Data::Section::Pluggable
+  Data::Section::Writer
   ExtUtils::MakeMaker
+  Path::Tiny
   Test2::V0
+  Text::Diff
   stable
   true
 );
